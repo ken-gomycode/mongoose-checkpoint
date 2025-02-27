@@ -2,6 +2,10 @@
 
 This project is a web application built using TypeScript, JavaScript, and npm. It includes a simple layout with a header and footer.
 
+## Author
+
+Ken Ovienadu (kenovienadu@gmail.com)
+
 ## Environment Variables
 
 - `PORT`: The port number on which the application runs. Default is `3090`.
@@ -30,15 +34,33 @@ This project is a web application built using TypeScript, JavaScript, and npm. I
 4. Create a `.env` file in the root directory of the project and add the following environment variables:
     ```sh
     PORT=3090
+    MONGODB_URL=<insert your MongoDB URL here>
     ```
 
-### Running the Application
+### Start the application:
 
-1. Start the application:
     ```sh
-    npm start
+    npm run build:run
     ```
-2. Open your browser and navigate to `http://localhost:3090`.
+
+If all goes well, you should have the following in the terminal
+
+```agsl
+   Connected to MongoDB
+   === Running Create Person ===
+   === Running Create People ===
+   === Running Find People ===
+   === Running Find Person ===
+   === Running Update Person ===
+   === Running Create Person ===
+   === Running Remove People ===
+   === Running Create Person ===
+   === Running Chain Query ===
+   Disconnected from MongoDB
+   
+   Process finished with exit code 0
+
+```
 
 ## License
 
