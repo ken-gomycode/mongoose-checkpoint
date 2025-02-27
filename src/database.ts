@@ -4,11 +4,13 @@ import config from "./config";
 class Database {
   public static async connect() {
     try {
-      await mongoose.connect(config.MONGODB_URL, );
+      await mongoose.connect(config.MONGODB_URL, {
+        dbName: 'checkpoint'
+      });
       console.log("Connected to MongoDB");
       return true;
-    } catch (error) {
-      console.error("Error connecting to MongoDB", error);
+    } catch (error: any) {
+      console.error("Error connecting to MongoDB", error?.message || error);
       return false;
     }
   }
@@ -18,8 +20,8 @@ class Database {
       await mongoose.disconnect();
       console.log("Disconnected from MongoDB");
       return true;
-    } catch (error) {
-      console.error("Error disconnecting from MongoDB", error);
+    } catch (error: any) {
+      console.error("Error disconnecting from MongoDB", error?.message || error);
       return false;
     }
   }

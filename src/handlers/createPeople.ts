@@ -1,6 +1,8 @@
 import Person from "../models/person.model";
 
 const createPeople = async () => {
+  console.log('=== Running Create People ===');
+
   const peopleToCreate = [
     {
       name: "John",

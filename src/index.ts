@@ -4,6 +4,7 @@ import createPeople from "./handlers/createPeople";
 import {findPeople, findPerson} from "./handlers/findPeople";
 import updatePerson from "./handlers/updatePerson";
 import removePeople from "./handlers/removePeople";
+import chainQuery from "./handlers/chainQuery";
 
 
 const runHandlers = async () => {
@@ -18,7 +19,8 @@ const runHandlers = async () => {
   await findPeople();
   await findPerson();
   await updatePerson();
-  await removePeople()
+  await removePeople();
+  await chainQuery();
 
   await Database.disconnect();
 }

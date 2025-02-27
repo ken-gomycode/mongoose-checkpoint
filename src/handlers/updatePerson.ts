@@ -2,6 +2,8 @@ import createPerson from "./createPerson";
 import Person from "../models/person.model";
 
 const updatePerson = async () => {
+  console.log('=== Running Update Person ===');
+
   const person = await createPerson('rita', 24);
 
   const updatedFavoriteFoods = person.favoriteFoods ? [...person.favoriteFoods, 'hamburger'] : ['hamburger'];

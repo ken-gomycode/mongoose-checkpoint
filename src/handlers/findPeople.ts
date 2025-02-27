@@ -2,6 +2,7 @@ import Person from "../models/person.model";
 import {ObjectId} from "mongodb";
 
 export const findPeople = async () => {
+  console.log('=== Running Find People ===');
   const peopleToCreate = [
     {
       name: "John",
@@ -30,7 +31,9 @@ export const findPeople = async () => {
 }
 
 export const findPerson = async () => {
-  const _id = new ObjectId("5f5f1f3b7b3b3b3b3b3b3b3b");
+  console.log('=== Running Find Person ===');
+
+  const _id = new ObjectId();
 
   // create person first
   const person = new Person({
